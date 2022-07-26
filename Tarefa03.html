@@ -1,0 +1,69 @@
+Estruturas condicionais e de repetição: Procedência de produto (Switch Case)
+"""
+Faça um programa que receba o preço de um produto e seu código de origem e mostre sua procedência. A procedência obedece à tabela a seguir.
+"""
+
+Início
+
+var
+Código: Inteiro
+Preço: Real
+Procedência: String
+
+Excreva ("Digite o preço do produto: ");
+Leia (Preço);
+
+Excreva ("Digite um código de 1 a 30: ");
+	Enquanto (código <=30) Faça
+		Se (código > 30) Então
+			Escreva ("Digite um código válido.")
+		FimSe
+	FimEnquanto
+
+Leia (codigo);
+Escolha código
+	Caso 1
+    	Se (código == 1) Então
+    		Escreva ("Código Selecionado 1 - O produto é procedente do Sul")
+    	FimSe;	
+    Caso2   	
+    	Se (código == 2) Então
+       		Escreva ("Código Selecionado 2 - O produto é procedente do Norte")
+       	FimSe;	
+	Caso3   
+		Se (código == 3) Então	
+       		Escreva ("Código Selecionado 3 - O produto é procedente do Leste")
+       	FimSe;
+	Caso4   
+		Se (código == 4) Então	
+       		Escreva ("Código Selecionado 4 - O produto é procedente do Oeste")
+       	FimSe;
+    Caso5   
+		Se (código == 5 ou código == 6) Então	
+       		Escreva ("Código Selecionado: ", código "O produto é procedente do Nordeste")
+       	FimSe;
+	Caso6   
+		Se (código >= 7 E código <= 9) Então	
+       		Escreva ("Código Selecionado: ", código "O produto é procedente do Sudeste")
+       	FimSe;
+	Caso7
+		Se (código >= 10 E código <= 20) Então	
+       		Escreva ("Código Selecionado: ", código "O produto é procedente do Centro-Oeste")
+       	FimSe;
+	Caso6   
+		Se (código >= 21 E código < 30) Então	
+       		Escreva ("Código Selecionado: ", código "O produto é procedente do Noroeste")
+       	FimSe;
+	FimEscolha
+	Fim
+	
+	
+		
+	
+	
+
+
+
+	
+
+

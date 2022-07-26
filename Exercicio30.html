@@ -1,0 +1,23 @@
+# Venda de um produto (IF)
+"""
+Um comerciante comprou um produto e quer vendê-lo com um lucro de 45% se o valor da compra for menor que R$ 20,00; caso contrário, o lucro será de 30%. Desenvolva um programa que dado o valor do produto, imprimir o valor de venda.
+"""
+
+Início
+
+var
+Lucro, ValorProduto, ValorVenda: Real
+
+ValorVenda = ValorProduto + Lucro
+
+Escreva ("Digite o valor do produto: ");
+Leia (ValorProduto);
+
+	Se (ValorProduto < 20) Então
+	Lucro = ValorProduto * 0.45
+		Escreva ("O preço de venda é: ", ValorVenda);
+	Senão
+	Lucro = ValorProduto * 0.30
+		Escreva ("O preço de venda é: ", ValorVenda);
+	FimSe
+	Fim	

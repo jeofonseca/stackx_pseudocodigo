@@ -1,0 +1,34 @@
+# Ângulos do triângulo (IF)
+"""
+Escreva um programa que leia o valor de 3 ângulos de um triângulo e escreva se o triângulo é Acutângulo, Retângulo ou Obtusângulo.
+
+Sendo que:
+
+Triângulo Retângulo: possui um ângulo reto. (igual a 90º)
+Triângulo Obtusângulo: possui um ângulo obtuso. (maior que90º)
+TriânguloAcutângulo: possui três ângulos agudos. (menor que 90º
+"""
+
+Início
+var
+Angulo1, Angulo2, Angulo3: float
+
+Escreva ("Digite o valor do primeiro ângulo");
+Leia (Angulo1);
+
+Escreva ("Digite o valor do segundo ângulo");
+Leia (Angulo2);
+
+Escreva ("Digite o valor do terceiro ângulo");
+Leia (Angulo3);
+
+Se (Angulo1 == 90 Ou Angulo2 == 90 Ou Angulo3 == 90) Então
+	Escreva ("Trata-se de um triângulo retângulo");
+		Se (Angulo1 > 90 Ou Angulo2 > 90 Ou Angulo3 > 90) Então
+			Escreva ("Trata-se de um triângulo obtusângulo");
+				Se (Angulo1 < 90 Ou Angulo2 < 90 Ou Angulo3 < 90) Então
+					Escreva ("Trata-se de um triângulo acutângulo");
+				FimSe
+		FimSe
+FimSe
+Fim					

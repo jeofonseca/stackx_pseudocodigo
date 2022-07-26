@@ -1,0 +1,44 @@
+# Endocrino (IF)
+"""
+Um endocrinologista deseja controlar a saúde de seus pacientes e, para isso, se utiliza do Índice de Massa Corporal (IMC). Sabendo-se que o IMC é calculado através da seguinte fórmula:
+IMC = peso / altura2
+Onde: 
+peso é dado em Kg
+altura é dada em metros
+Crie um programa que dados o peso e altura do paciente, exiba sua faixa de risco
+"""
+
+Início
+
+var
+Peso, Altura: Real
+FaixaRisco: String
+
+IMC = peso / altura * altura
+
+Escreva ("Digite a altura do paciente: ");
+Leia (Altura);
+
+Escreva ("Digite o peso do paciente: ");
+Leia (Peso);
+
+	Se (IMC < 20) Então
+		Escreva ("O paciente está abaixo do peso");
+
+			Se (IMC >= 20 E IMC < 25) Então
+				Escreva ("O paciente está em seu peso normal");
+
+					Se (IMC > 25 E IMC <= 30) Então
+						Escreva ("O paciente apresenta excesso de peso");
+
+							Se (IMC > 30 E IMC <= 35) Então
+								Escreva ("O paciente apresenta obesidade");
+
+									Se (IMC > 35) Então
+										Escreva ("O paciente apresenta obesidade mórbida");
+									FimSe
+							FimSe			
+					FimSe
+			FimSe
+	FimSe
+	Fim						

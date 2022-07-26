@@ -1,0 +1,39 @@
+# Polígono (IF)
+"""
+Escreva um programa para ler o número de lados de um polígono regular e a medida do lado (em cm).
+
+Calcular e imprimir o seguinte:
+
+Se o número de lados for igual a 3 escrever TRIÂNGULO e o valor da área
+
+Se o número de lados for igual a 4 escrever QUADRADO e o valor da sua área.
+
+Se o número de lados for igual a 5 escrever PENTÁGONO.
+
+Obs: O foco aqui é a lógica com o comando de controle IF, demais conhecimentos envolvidos pesquise mais. 
+"""
+
+Início
+
+var
+NumeroLados: Inteiro
+MedidaLado, AlturaTriangulo, Area: float
+
+Escreva ("Digite a quantidade de lados")
+Leia (NumeroLados);
+
+Escreva ("Digite a medida do lado em centímetros");
+Leia (MedidaLado);
+
+Se (NumeroLados = 3) Então
+Area = MedidaLado * AlturaTriangulo / 2
+	Escreva ("A figura geométrica é um TRIÂNGULO e sua área é: ", Area);
+		Se (Se (NumeroLados = 4) Então
+		Area = MedidaLado * MedidaLado
+			Escreva ("A figura geométrica é um QUADRADO	e sua área é: ", Area);
+				Se (Se (NumeroLados = 5) Então
+					Escreva ("A figura geométrica é um PENTAGONO");
+				FimSe
+		FimSe
+FimSe
+Fim					

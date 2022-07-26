@@ -1,0 +1,33 @@
+# Credito para alunos (IF)
+"""
+A StackX abriu uma linha de crédito para os alunos. O valor máximo da prestação não poderá ultrapassar 30% do salário bruto. Fazer um programa que permita entrar com o salário bruto, o valor do empréstimo e o número de parcelas e informar o valor da parcela e se o empréstimo pode ou não ser concedido. Caso o empréstimo não possa ser concedido, informar ainda o valor máximo da prestação.
+"""
+
+Início
+
+var
+ValorMaximoParcela, SalarioBruto, ValorEmprestimo, ValorParcela: Real
+NumeroParcelas: Inteiro
+
+ValorParcela = ValorEmprestimo // NumeroParcelas
+ValorMaximoParcela = SalarioBruto * 0.30
+
+Escreva ("Digite o valor do salário bruto do aluno: ");
+Leia (SalarioBruto);
+
+Escreva ("Digite o valor do empréstimo a ser concedido: ");
+Leia (ValorEmprestimo);
+
+Escreva ("Digite o número de parcelas do empréstimo a ser concedido: ");
+Leia (NumeroParcelas);
+
+	Se (ValorParcela <= ValorMaximoParcela) Então
+		Escreva ("A parcela do empréstimo é: ", ValorParcela "O empréstimo pode ser concedido")
+	Senão
+		Escreva ("A parcela do empréstimo é: ", ValorParcela "O empréstimo não pode ser concedido, pois o valor máximo da prestação deve ser: ", ValorMaximoParcela).
+	FimSe
+	Fim		
+
+
+
+

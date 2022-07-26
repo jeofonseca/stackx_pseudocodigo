@@ -1,0 +1,24 @@
+# Condição eleitoral (IF)
+"""
+Desenvolva um programa que dada a idade de uma pessoa, determine sua condição de eleitor
+"""
+
+Início
+
+var
+Idade: Inteiro
+
+Escreva ("Digite a sua idade: ");
+Leia (Idade);
+
+	Se (Idade < 16) Então
+		Escreva ("Você não tem idade para votar.");
+			Se (Idade >= 16 E Idade < 18 Ou Idade >= 65) Então
+				Escreva ("Seu voto é facultativo.");
+					Se (Idade > 18 E Idade < 64) Então
+						Escreva ("Seu voto é obrigatório.");
+					FimSe
+			FimSe
+	FimSe
+	Fim					
+	

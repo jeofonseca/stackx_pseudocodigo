@@ -1,0 +1,108 @@
+# Estruturas condicionais e de repetição: Preço de produtos (Swich Case)
+"""
+Faça um programa que receba o preço, a categoria (1 – limpeza; 2 – alimentação; ou 3 – vestuário) e a situação (R – produtos que necessitam de refrigeração; e N – produtos que não necessitam de refrigeração). Calcule e mostre:
+
+"""
+
+
+Inicio
+
+var
+Preco, NovoPreco, ValorAumento, Imposto: Real
+Categoria: Inteiro
+Situação: Char
+
+Imposto1 = 0.05
+Imposto2 = 0.08
+
+ValorAumento1 = Preco + Preco * 0.05
+ValorAumento2 = Preco + Preco * 0.08
+ValorAumento3 = Preco + Preco * 0.10
+ValorAumento4 = Preco + Preco * 0.12
+ValorAumento5 = Preco + Preco * 0.15
+ValorAumento6 = Preco + Preco * 0.18
+
+Excreva ("Digite o preço do produto: ");
+Leia (Preco);
+
+Escreva("Escolha uma das opções abaixo.")
+	Escreva ("1 - Categoria: Limpeza")
+	Escreva ("2 - Categoria: Alimentação")
+	Escreva ("3 - Categoria: Vestuário")
+	
+	Escreva ("Digite o número da opção desejada: ")
+	Leia (categoria)
+   		Enquanto (categoria=0 Ou categoria>3) faca
+   			Escreva ("Opção inválida.")
+   			Escreva("Escolha uma das opções abaixo.")
+			Escreva ("1 - Categoria: Limpeza")
+			Escreva ("2 - Categoria: Alimentação")
+			Escreva ("3 - Categoria: Vestuário")
+	
+			Escreva ("Digite o número da opção desejada: ")
+			Leia (categoria)
+   		FimEnquanto
+
+	Escolha
+	Caso 1
+    	Escreva ("Opção Selecionada: 1 - Categoria: Limpeza")
+       		Se (Preco <= 25) Então
+    			ValorAumento = ValorAumento1
+    			Escreva ("O preço atualizado é : R$ ", ValorAumento)
+    		Senão
+    			ValorAumento = ValorAumento4
+    			Escreva ("O preço atualizado é : R$ ", ValorAumento)
+    		FimSe		
+    			
+    Caso 2
+    	Escreva ("Opção Selecionada: 2 - Categoria: Alimentação")
+       		Se (Preco <= 25) Então
+    			ValorAumento = ValorAumento2
+    			Escreva ("O preço atualizado é : R$ ", ValorAumento)
+    		Senão
+    			ValorAumento = ValorAumento5
+    			Escreva ("O preço atualizado é : R$ ", ValorAumento)			
+    		FimSe	
+
+	Caso 3
+    	Escreva ("Opção Selecionada: 3 - Categoria: Vestuário")
+       		Se (Preco <= 25) Então
+    			ValorAumento = ValorAumento3
+    			Escreva ("O preço atualizado é : R$ ", ValorAumento)
+    		Senão
+    			ValorAumento = ValorAumento6
+    			Escreva ("O preço atualizado é : R$ ", ValorAumento)
+    		FimSe
+    FimEscolha			
+
+    Escreva("Escolha uma das situações abaixo:")
+	Escreva ("Digite R - produtos que necessitam de refrigeração.")
+	Escreva ("Digite N - produtos que não necessitam de refrigeração.")
+	Escreva ("Digite a opção desejada: ")
+	Leia (Situação)
+   		Enquanto (Situação <> R E op <> N) Faça
+   			Escreva ("Situação inválida.")
+   			Escreva("Escolha uma das situações abaixo:")
+			Escreva ("Digite R - produtos que necessitam de refrigeração.")
+			Escreva ("Digite N - produtos que não necessitam de refrigeração.")
+			Escreva ("Digite a opção desejada: ")
+			Leia (Situação)
+   		FimEnquanto
+
+   	Se (situação == R Ou categoria == 2) Então
+   		Imposto = Imposto1
+   	Senão 
+   		Imposto = Imposto2
+    FimSe	
+
+NovoPreco = Precp + ValorAumento - Imposto
+   	Se (NovoPreco <= 50) Então
+   		Escreva ("Barato");
+   			Se (NovoPreco > 50 E < 120) Então
+   				Escreva ("Normal");
+   					Se (NovoPreco >= 120) Então
+   						Escreva ("Caro");
+   					FimSe
+   			FimSe
+   	FimSe
+   	Fim					

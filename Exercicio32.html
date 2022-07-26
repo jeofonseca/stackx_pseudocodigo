@@ -1,0 +1,41 @@
+#  Valor de venda (IF)
+"""
+Um comerciante calcula o valor de venda, tendo em vista a tabela a seguir:
+
+Valor da compra			Valor da venda
+< 10,00					Lucro de 70%
+>= 10,00 e < 30,00		Lucro de 50%
+>= 30,00 e < 50,00		Lucro de 40%
+>= 50,00				Lucro de 30%
+
+Crie um programa que possa entrar com o valor da compra e imprimir o valor da venda.
+"""
+
+Início
+
+var
+Lucro, ValorCompra, ValorVenda: Real
+
+Escreva ("Digite o valor da compra: ")
+Leia (ValorCompra)
+
+	Se(ValorCompra < 10) Então
+	ValorVenda = ValorCompra + ValorCompra * 0.7
+		Escreva ("O valor de venda é: ", ValorVenda);
+
+			Se(ValorCompra >= 10 E ValorCompra < 30) Então
+			ValorVenda = ValorCompra + ValorCompra * 0.5
+				Escreva ("O valor de venda é: ", ValorVenda);
+
+					Se(ValorCompra >= 30 E ValorCompra < 50) Então
+					ValorVenda = ValorCompra + ValorCompra * 0.4
+						Escreva ("O valor de venda é: ", ValorVenda);
+
+							Se(ValorCompra >= 50) Então
+							ValorVenda = ValorCompra + ValorCompra * 0.3
+								Escreva ("O valor de venda é: ", ValorVenda);
+							FimSe
+					FimSe
+			FimSe
+	FimSe
+	Fim						

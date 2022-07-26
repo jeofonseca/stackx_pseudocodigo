@@ -1,0 +1,29 @@
+# Três valores e o maior deles (IF)
+"""
+Escreva um programa para ler 3 valores inteiros e escrever o maior deles. Considere que o usuário não informará valores iguais.
+"""
+
+Inicio
+
+var
+n1, n2, n3: Inteiros
+
+Escreva ("Digite um número: ");
+Leia (n1);
+
+Escreva ("Digite um número: ");
+Leia (n2);
+
+Escreva ("Digite um número: ");
+Leia (n3);
+
+Se (n1 > n2 E n1 > n3) Então
+	Escreva ("O maior número é ", n1);
+		Se (n2 > n1 E n2 > n3) Então
+			Escreva ("O maior número é ", n2);
+				Se (n3 > n1 E n3 > n2) Então
+					Escreva ("O maior número é ", n3);
+				FimSe
+		FimSe
+FimSe
+Fim						

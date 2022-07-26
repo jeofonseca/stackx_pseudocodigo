@@ -1,0 +1,30 @@
+# Idade de um nadador (IF)
+"""Faça um programa que receba a idade de um nadador e mostre sua categoria, usando as regras a seguir. Para idade inferior a 5, qual mensagem deveríamos mostrar?
+"""
+
+Inicio
+
+var
+Idade: Inteiro
+
+Escreva ("Digite a Idade");
+Leia (Idade)
+	Se (Idade < 5) então;
+		Escreva ("Categoria inexistente");
+			Se (Idade >5 E Idade<=7) então;
+				Escreva ("Categoria Infantil");
+					Se (Idade >8 E Idade <=10) então;
+						Escreva ("Categoria Juvenil");
+							Se (Idade >11 E Idade <=15) então;
+								Escreva ("Categoria Adolescente");
+									Se (Idade >16 E Idade <=30) então;
+										Escreva ("Categoria Adulto");
+											Se (Idade >30) então;
+												Escreva ("Categoria Sênior");
+											FimSe
+									FimSe
+							FimSe
+					FimSe
+			FimSe
+	FimSe
+	Fim											

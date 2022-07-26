@@ -1,0 +1,39 @@
+# Triângulo (IF)
+"""
+Escreva um programa que leia as medidas dos lados de um triângulo e escreva se ele é Equilátero, Isósceles ou Escaleno.
+
+Sendo que:
+
+Triângulo Equilátero: possui os 3 lados iguais.
+Triângulo Isóscele: possui 2 lados iguais.
+Triângulo Escaleno: possui 3 lados diferentes.
+"""
+
+Inicio
+
+var
+MedidaLado1, MedidaLado2, MedidaLado3: float
+
+Escreva ("Digite a medida do primeiro lado do triângulo: ");
+Leia (MedidaLado1);
+
+Escreva ("Digite a medida do segundo lado do triângulo: ");
+Leia (MedidaLado2);
+
+Escreva ("Digite a medida do terceiro lado do triângulo: ");
+Leia (MedidaLado3);
+
+Equilatero = MedidaLado1 == MedidaLado2 E MedidaLado2 == MedidaLado3
+Isosceles = MedidaLado1 == MedidaLado2 Ou MedidaLado2 == MedidaLado3
+Escaleno = MedidaLado1 <> MedidaLado2 E MedidaLado2 <> MedidaLado3 E MedidaLado1 <> MedidaLado3
+
+Se (Equilatero) Então
+	Escreva ("Trata-se de um triângulo equilátero.");
+		Se (Isosceles) Então
+			Escreva ("Trata-se de um triângulo isósceles.");
+				Se (Escaleno) Então
+					Escreva ("Trata-se de um triãngulo escaleno.");
+				FimSe
+		FimSe
+FimSe
+Fim					

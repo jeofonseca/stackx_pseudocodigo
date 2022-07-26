@@ -1,0 +1,36 @@
+# Salário bruto (IF)
+"""
+Faça um programa que receba o salário bruto de um funcionário e, usando a tabela a seguir, calcule e mostre o valor a receber. Sabe-se que este é composto pelo salário bruto acrescido de gratificação e descontado o imposto de 7% sobre o salário.
+"""
+
+Inicio
+
+var
+SalarioBruto, SalarioLiquido, Gratificação: Real
+
+
+Escreva ("Digite o Salário Bruto");
+Leia (SalarioBruto);
+
+SalarioLiquido = ((SalarioBruto + Gratificacao) - (SalarioBruto * 0.07));
+
+	Se (SalarioBruto <= 350) Então
+	Gratificacao = 100
+		Escreva ("O Salário Líquido é: ", SalarioLiquido);
+			
+			Se (SalarioBruto >= 351 e SalarioBruto <= 600) Então
+			Gratificacao = 75
+				Escreva ("O Salário Líquido é: ", SalarioLiquido);
+					
+					Se (SalarioBruto >= 601 e SalarioBruto <= 900) Então
+					Gratificacao = 50
+						Escreva ("O Salário Líquido é: ", SalarioLiquido);
+							
+							Se (SalarioBruto > 901) Então
+							Gratificacao = 35
+								Escreva ("O Salário Líquido é: ", SalarioLiquido);
+							FimSe
+					FimSe
+			FimSe
+	FimSe
+	Fim			

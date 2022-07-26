@@ -1,0 +1,34 @@
+# Altura e sexo (IF)
+"""
+Tendo como entrada a altura e o sexo (codificado da seguinte forma: 1: feminino 2: masculino) de uma pessoa, construa um programa que calcule e imprima seu peso ideal, utilizando as seguintes Fórmulas:
+
+para homens: (72.7 * Altura) – 58
+para mulheres: (62.1 * Altura) – 44.7
+"""
+
+Início
+
+var
+Altura, Peso PesoIdealMasculino, PesoIdealFeminino: Real
+CodigoSexo: Inteiro
+
+Escreva ("Digite sua altura: ")
+Leia (altura)
+
+Escreva ("Escolha seu sexo, digitando 1 para Masculino ou 2 para Femininou: ");
+Leia (CodigoSexo)
+	Enquanto (CodigoSexo <> 1 E 2) faca
+	FimEnquanto
+
+Se (CodigoSexo == 1) Então
+PesoIdealMasculino = (72.7 * Altura) – 58
+	Escreva ("O seu peso ideal é: ", PesoIdealMasculino)
+
+		Senão
+		PesoIdealFeminino = (62.1 * Altura) – 44.7
+			Escreva ("O seu peso ideal é: ", PesoIdealFeminino)
+FimSe
+Fim			
+
+
+

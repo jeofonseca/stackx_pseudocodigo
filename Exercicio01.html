@@ -1,0 +1,38 @@
+# Gratificação de natal (IF)
+"""
+Uma empresa decidiu dar uma gratificação de Natal a seus funcionários, baseada no número de horas extras e no número de horas que o funcionário faltou ao trabalho. O valor do prêmio é obtido pela consulta à tabela que se segue, na qual:
+
+H = (número de horas extras – (2/3 * ( número de horas falta )) * 60
+"""
+
+Inicio
+
+var
+HorasExtras, HorasFalta, Minutos: Real
+
+	Escreva ("Digite a quantidade de Horas Extras");
+	Leia (HorasExtras);
+	Escreva ("Digite a quantidade de Horas Faltantes");
+	Leia (HorasFalta);
+
+	Minutos = (HorasExra - (2/3 * HorasFalta)) * 60;
+
+		Se (Minutos >= 2401) então
+			Escreva ("A gratificação será de R$ 500,00")
+				Se (Minutos >=1801 e Minutos <=2400)
+					Escreva ("A gratificação será de R$ 400,00")
+						Se (Minutos >=1201 e Minutos <=1800)
+							Escreva ("A gratificação será de R$ 300,00")
+								Se (Minutos >=600 e Minutos <=1200)
+									Escreva ("A gratificação será de R$ 200,00")
+										Se (Minutos <600)
+											Escreva ("A gratificação será de R$ 100,00")
+										FimSe
+								FimSe
+						FimSe
+				FimSe
+		FimSe
+		Fim								
+
+
+

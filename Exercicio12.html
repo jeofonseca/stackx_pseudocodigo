@@ -1,0 +1,51 @@
+#  3 valores em ordem (IF)
+"""
+Escreva um programa para ler 3 valores inteiros (considere que não serão lidos valores iguais) e escrevê-los em ordem crescente.
+"""
+
+Início
+
+var
+n1, n2, n3: Inteiro
+
+Ordem1 = n1, n2, n3
+Ordem2 = n1, n3, n2
+Ordem3 = n2, n1, n3
+Ordem4 = n2, n3, n1
+Ordem5 = n3, n1, n2
+Ordem6 = n3, n2, n1 
+
+Escreva ("Digite um número: ");
+Leia (n1);
+
+Escreva ("Digite um número diferente do anterior: ");
+Leia (n2);
+	Se (n2 == n1) Então
+	Escreva ("Digite um número diferente do anterior: ");
+	FimSe.
+
+Escreva ("Digite um número dos anteriores: ");
+Leia (n3);
+	Se (n3 == n1 Ou n3 == n2) Então
+	Escreva ("Digite um número diferente dos anteriores: ");
+	FimSe. 
+
+Se (n1 > n2 E n2 > n3) Então
+	Escreva ("A sequência de números digitados é: ", Ordem1);
+		Se (n1 > n3 E n3> n2) Então
+			Escreva ("A sequência de números digitados é: ", Ordem2);
+				Se (n2 > n1 E n1 > n3) Então
+					Escreva ("A sequência de números digitados é: ", Ordem3);
+						Se (n2 > n3 E n3 > n1) Então
+							Escreva ("A sequência de números digitados é: ", Ordem4);	
+								Se (n3 > n1 E n1 > n2) Então
+									Escreva ("A sequência de números digitados é: ", Ordem5);
+										Se (n3 > n2 E n2 > n1) Então
+											Escreva ("A sequência de números digitados é: ", Ordem6).
+										FimSe	
+								FimSe
+						FimSe
+				FimSe
+		FimSe
+FimSe
+Fim										

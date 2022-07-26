@@ -1,0 +1,43 @@
+# Idade e peso (IF)
+"""Faça um programa que receba a idade e o peso de uma pessoa e verifique e mostre em qual grupo de risco essa pessoa se encaixa.
+"""
+
+Inicio
+
+var
+Idade: Inteiro
+Peso: Real
+
+Escreva ("Digite a Idade");
+Leia (Idade);
+Escreva ("Digite o Peso");
+Leia (Peso);
+
+Se (Idade <20 e Peso <=60) então;
+	Escreva ("Categoria 9");
+		Se (Idade <20 E Peso >60 E Peso <=90) então;
+			Escreva ("Categoria 8");
+				Se (Idade <20 E Peso >90) então;
+					Escreva ("Categoria 7");
+						Se (Idade >=20 E Idade <=50 E Peso <=60) então;
+							Escreva ("Categoria 6");
+								Se (Idade >=20 E Idade <=50 E Peso >60 E Peso <=90) então;
+									Escreva ("Categoria 5");
+										Se (Idade >=20 E Idade <=50 E Peso >90) então;
+											Escreva ("Categoria 4");
+												Se (Idade >50 E Peso <=60) então;
+													Escreva ("Categoria 3");
+														Se (Idade >50 E Peso >60 E Peso <=90) então;
+															Escreva ("Categoria 2");
+																Se (Idade >50 E Peso >90) então;
+																	Escreva ("Categoria 1");
+																FimSe
+														FimSe
+												FimSe
+										FimSe
+								FimSe
+						FimSe
+				FimSe
+		FimSe
+FimSe
+Fim												

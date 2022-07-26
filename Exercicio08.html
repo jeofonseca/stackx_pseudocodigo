@@ -1,0 +1,30 @@
+# Número maior (IF)
+"""
+Escreva um programa para ler 2 valores (considere que não serão informados valores iguais) e escrever o maior deles.
+"""
+
+Início
+
+var
+n1, n2: float
+
+Laco: Enquanto (n1 <> n2) faça
+
+
+Enquanto (Laco) faca
+	Escreva ("Digite um número: ");
+	Leia (n1);
+	
+	Escreva ("Digite um número diferente do anterior: ");
+	Leia (n2);
+		Se (n2 == n1) Entao
+			Escreva ("Digite um número diferente: ")
+			Continue;
+		FimSe
+			Se (n1 > n2) Então
+				Escreva ("O maior número é ", n1);
+					Senão
+					Escreva ("O maior número é ", n2);
+			FimSe
+		FimEquanto
+		Fim

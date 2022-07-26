@@ -1,0 +1,32 @@
+# Carro novo (IF)
+"""
+O custo ao consumidor de um carro novo é a soma do custo de fábrica com a porcentagem do distribuidor e com os impostos, ambos aplicados ao custo de fábrica. Sabe-se que as porcentagens são as mesmas que estão na tabela a seguir. Faça um programa que receba o custo de fábrica de um carro e mostre o custo ao consumidor.
+"""
+
+Início
+
+var
+CustoFabrica, CustoConsumidor, PorcentagemDistribuidor, Impostos: Real
+
+PorcetagemDistribuidor = Porcentagem * CustoFabrica
+Impostos = PorcentagemImpostos * CustoFabrica
+CustoConsumidor = CustoFabrica + PorcetagemDistribuidor + Impostos
+
+Escreva ("Digite o custo de fábrica: ");
+Leia (CustoFabrica);
+
+	Se (CustoFabrica <= 12.000) Então
+	Porcentagem = 0.05 E PorcentagemImpostos = 0
+		Escreva ("O custo ao consumidor é: ", CustoConsumidor);
+
+			Se (CustoFabrica > 12.000 E <= 25.000) Então
+			Porcentagem = 0.10 E PorcentagemImpostos = 0.15
+				Escreva ("O custo ao consumidor é: ", CustoConsumidor);
+
+					Se (CustoFabrica > 25.000) Então
+					Porcentagem = 0.15 E PorcentagemImpostos = 0.20
+						Escreva ("O custo ao consumidor é: ", CustoConsumidor);
+					FimSe
+			FimSe
+	FimSe
+	Fim					

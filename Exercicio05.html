@@ -1,0 +1,128 @@
+# Empresa com 10 funcionários (While)
+
+"""
+Uma empresa possui dez funcionários com as seguintes características: código, número de horas trabalhadas no mês, turno de trabalho (M – matutino; V – vespertino; N – noturno), categoria (O – operário; ou G – gerente), valor da hora trabalhada.
+
+Sabendo-se que essa empresa deseja informatizar sua folha de pagamento, faça um programa que: 
+
+a) Leia as informações dos funcionários, exceto o valor da hora trabalhada, não permitindo que sejam informações dos turnos e nem categorias inexistentes. Trabalhe sempre com a digitação de letras maiúsculas; 
+
+b) Calcule o valor da hora trabalhada, conforme a tabela 1. Adote o valor de R$450,00 para o salário mínimo; 
+
+c) Calcule o salário inicial dos funcionários com base no valor da hora trabalhada e no número de horas trabalhadas;
+
+d) Calcule o valor do auxílio alimentação recebido pelo funcionário de acordo com seu salário inicial, conforme a tabela 2;
+
+e) Mostre o código, número de horas trabalhadas, valor da hora trabalhada, salário inicial, auxílio alimentação e salário final (salário inicial + auxílio alimentação).
+"""
+
+Inicio
+
+var
+Código, Caso: Inteiro
+SalarioInicial, SalarioFinal, ValorHora, AuxilioAlimentacao, ValorHora, HorasTrabalhadas: Real
+
+SalarioMinimo = 450
+
+SalarioInicial1 = HorasTrabalhadas * ValorHora1
+SalarioInicial2 = HorasTrabalhadas * ValorHora2
+SalarioInicial3 = HorasTrabalhadas * ValorHora3
+SalarioInicial4 = HorasTrabalhadas * ValorHora4
+
+ValorHora1 = SalarioMinimo * 0.18
+ValorHora2 = SalarioMinimo * 0.15
+ValorHora3 = SalarioMinimo * 0.13
+ValorHora4 = SalarioMinimo * 0.10
+
+Laco = 1
+
+Enquanto (Laco <=10) Faça
+
+Excreva ("Digite o Código: ");
+Leia (codigo);
+
+Escreva ("Digite o número de horas trabalhadas no mês: ");
+Leia (HorasTrabalhadas);
+
+Escreva("Escolha uma das opções abaixo: ")
+ 
+	Escreva ("1 - Categoria: Gerente e Turno: Noturno")
+	Escreva ("2 - Categoria: Gerente e Turno: Matutino ou Vespertino")
+	Escreva ("3 - Categoria: Operário e Turno: Noturno")
+	Escreva ("4 - Categoria: Operário e Turno: Matutino ou Vespertino")
+
+	Escreva ("Digite o número da operação desejada: ")
+	Leia (op)
+   		Enquanto (op=0 Ou op>4) faca
+   			Escreva ("Opção inválida.")
+   		FimEnquanto
+
+	Escolha op
+	Caso 1
+    	Escreva ("Opção Selecionada: 1 - Categoria: Gerente e Turno: Noturno")
+       		Se (SalarioInicial1 <=300) Então
+    			AuxilioAlimentação = SalarioInicial1 * 0,20;
+    				Se (SalarioInicial1 >300 Ou SalarioInicial1 <=600) Então
+    					AuxilioAlimentação = SalarioInicial1 * 0,15;
+    						Se (SalarioInicial1 >600) Então
+    							AuxilioAlimentação = SalarioInicial1 * 0,05;
+    						FimSe
+    				FimSe
+    		FimSe
+
+	SalarioFinal = SalarioIncial1 + AuxilioAlimentacao	
+
+  	Escreva("O Código do Funcionário é: ", codigo; "O número de horas trabalhadas é: ", HorasTrabalhadas; "O valor da hora trabalhada é: ", ValorHora1; "O salário inicial é: ", SalarioInicial1; "O auxílio alimentação é: ", AuxilioAlimentacao; "O salário final do funcionário é: ", SalarioFinal).
+
+	Caso 2
+    	Escreva("Opção Selecionada: 2 - Categoria: Gerente e Turno: Matutino ou Vespertino")
+           	Se (SalarioInicial2 <=300) Então
+    		AuxilioAlimentação = SalarioInicial2 * 0,20;
+    			Se (SalarioInicial2 >300 Ou SalarioInicial2 <=600) Então
+    			AuxilioAlimentação = SalarioInicial2 * 0,15;
+    				Se (SalarioInicial2 >600) Então
+    					AuxilioAlimentação = SalarioInicial2 * 0,05;
+    				FimSe
+    			FimSe
+    		FimSe
+	
+	SalarioFinal = SalarioIncial2 + AuxilioAlimentacao	
+
+   	Escreva("O Código do Funcionário é: ", codigo; "O número de horas trabalhadas é: ", HorasTrabalhadas; "O valor da hora trabalhada é: ", ValorHora2; "O salário inicial é: ", SalarioInicial2; "O auxílio alimentação é: ", AuxilioAlimentacao; "E o salário final é: ", SalarioFinal)
+
+	Caso 3
+    	Escreva("Opção Selecionada: 3 - Categoria: Operário e Turno: Noturno")
+            Se (SalarioInicial3 <= 300) Então
+    		AuxilioAlimentação = SalarioInicial3 * 0,20;
+    			Se (SalarioInicial3 > 300 Ou SalarioInicial3 <=600) Então
+    			AuxilioAlimentação = SalarioInicial3 * 0,15;
+    				Se (SalarioInicial3 > 600) Então
+    				AuxilioAlimentação = SalarioInicial3 * 0,05;
+    				FimSe
+    			FimSe
+    		FimSe
+
+	SalarioFinal = SalarioIncial3 + AuxilioAlimentacao
+
+	Escreva("O Código do Funcionário é: ", codigo; "O número de horas trabalhadas é: ", HorasTrabalhadas; "O valor da hora trabalhada é: ", ValorHora3; "O salário inicial é: ", SalarioInicial3; "O auxílio alimentação é: ", AuxilioAlimentacao; "E o salário final é: ", SalarioFinal)
+
+
+	Caso 4
+    	Escreva("Opção Selecionada: 4 - Operário e Turno: Matutino ou Vespertino")
+            Se (SalarioInicial4 <= 300) Então
+    		AuxilioAlimentação = SalarioInicial4 * 0,20;
+    			Se (SalarioInicial4 > 300 Ou SalarioInicial3 <=600) Então
+    			AuxilioAlimentação = SalarioInicial4 * 0,15;
+    				Se (SalarioInicial4 >600) Então
+    				AuxilioAlimentação = SalarioInicial4 * 0,05;
+    				FimSe
+    			FimSe
+    		FimSe
+
+	SalarioFinal = SalarioIncial4 + AuxilioAlimentacao
+
+	Escreva("O Código do Funcionário é: ", codigo; "O número de horas trabalhadas é: ", HorasTrabalhadas; "O valor da hora trabalhada é: ", ValorHora4; "O salário inicial é: ", SalarioInicial4; "O auxílio alimentação é: ", AuxilioAlimentacao; "E o salário final é: ", SalarioFinal)
+
+	FimEscolha
+FimEnquanto	
+Fim.

@@ -1,0 +1,56 @@
+# Estruturas condicionais e de repetição: Operações com números (Switch Case)
+"""
+Faça um programa que receba dois números e execute as operações listadas a seguir, de acordo com a escolha do usuário.
+"""
+
+Início
+
+var
+Código: Inteiro
+Número: Real
+
+Excreva ("Digite o primeiro número: ");
+Leia (número1);
+
+Excreva ("Digite o segundo número: ");
+Leia (número2);
+
+Excreva ("Digite uma das opções abaixo.");
+Escreva ("Escolha a opção: ")
+	
+Leia (codigo);
+Escolha código
+	
+Caso 1
+   	Se (código == 1) Então
+   	média = (número1 + número2) / 2
+   		Escreva ("A média entre os números digitados é: ", média)
+   	FimSe;	
+Caso2   	
+   	Se (código == 2) Então
+       	Para (numero1 > numero2) Entao
+       		Diferença = número1 - número2;
+       	Senão
+       		Diferença = número2 - número1.
+       	FimPara
+      
+      Escreva ("A diferença do maior número pelo menos é: ", Diferença) 		
+    FimSe  
+
+Caso3   
+	Se (código == 3) Então	
+    Produto = número1 * número2
+       	Escreva ("Código Selecionado 3 - O produto entre os números digitados é: ", Produto)
+    FimSe;
+
+Caso4   
+	Se (código == 4) Então	
+    Divisão = número1 / número2
+      	Escreva ("Código Selecionado 4 - A divisão do primeiro número pelo segundo é: ", Divisão)
+       		Se (número2 = 0) Então
+       			Escreva ("Digite um número diferente pois não é possível divisão por zero.");
+       		FimSe
+    FimSe   			
+
+FimEscolha
+Fim

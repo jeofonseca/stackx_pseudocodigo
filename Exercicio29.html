@@ -1,0 +1,50 @@
+# Média final do faluno (IF)
+"""
+Desenvolva um programa para determinar a média final e a situação (Aprovado, Reprovado ou Exame) de um aluno em uma disciplina. São dadas as notas de três provas, o número de aulas ministradas e o número de faltas do aluno. Sabe-se que a média final é a média aritmética dessas três provas e que a média para aprovação é 7, menor do que 3 para reprovação e as demais em exame. Entretanto, o aluno estará reprovado se tiver faltado a mais do que 25% das aulas.
+"""
+
+Início
+
+var
+MediaFinal, NotaProva: Real
+Faltas, AulasMinistradas: Inteiro 
+Situação: char
+
+MediaFinal = (Nota1 + Nota2 + Nota3) // 3
+Aprovado = MediaFinal >= 7
+Reprovado = MediaFinal < 3
+Exame = MediaFinal >=3 Ou MediaFinal < 7
+ReprovadoFalta = Faltas > AulasMinistradas * 0,25
+
+Escreva ("Digite a nota da primeira prova: ");
+Leia (Nota1);
+
+Escreva ("Digite a nota da segunda prova: ");
+Leia (Nota2);
+
+Escreva ("Digite a nota da terceira prova: ");
+Leia (Nota3);
+
+Escreva ("Digite a quantidade de aulas da disciplina: ");
+Leia (AulasMinistradas);
+
+Escreva ("Digite a quantidade de faltas que o aluno teve na disciplina: ");
+Leia (Faltas);
+
+	Se (ReprovadoFalta = V) Então
+		Escreva ("O aluno está reprovado por faltas.")
+	Senão
+		Continue
+	Fim Se	
+
+Se	(MediaFinal >= 7) Então
+	Escreva ("O aluno está Aprovado.");
+		Se	(MediaFinal < 3) Então
+			Escreva ("O aluno está Reprovado.");
+				Se	(MediaFinal >= 3 Ou MediaFinal < 7) Então
+					Escreva ("O aluno está Exame.");
+				FimSe
+		FimSe				
+FimSe		
+Fim
+

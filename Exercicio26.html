@@ -1,0 +1,29 @@
+# Números negativos (IF)
+"""
+Desenvolva um programa que dados três números inteiros, informe quantos são negativos.
+"""
+
+Início
+
+var
+N1, N2 e N3: Inteiro
+
+Escreva ("Digite um número: ");
+Leia (N1);
+
+Escreva ("Digite um número: ");
+Leia (N2);
+
+Escreva ("Digite um número: ");
+Leia (N3);
+
+	Se (N1 < 0) Então
+		Escreva ("foi digitado um número negativo.")
+			Se ((N1 < 0 E N2 < 0) Ou (N1 < 0 E N3 < 0) Ou (N2 < 0 E N3 < 0)) Então
+				Escreva ("Foram digitados dois números negativos.")
+					Se (N1 < 0 E N2 < 0 E N3 < 0) Então
+						Escreva ("Foram digitados três números negativos.")
+					FimSe
+			FimSe
+	FimSe
+	Fim					

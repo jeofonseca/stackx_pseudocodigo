@@ -1,0 +1,45 @@
+# Impressão de receita (IF)
+"""
+Criar um programa que a partir da idade e peso do paciente calcule a dosagem de determinado medicamento e imprima a receita informando quantas gotas do medicamento o paciente deve tomar por dose. Considere que o medicamento em questão possui 500 mg por ml, e que cada ml corresponde a 20 gotas.
+Adultos ou adolescentes desde 12 anos, inclusive, se tiverem peso igual ou acima de 60 Kg devem tomar 1000 mg; com peso abaixo de 60 Kg devem tomar 875 mg.
+Para crianças e adolescentes abaixo de 12 anos a dosagem é calculada pelo peso corpóreo
+"""
+
+Início
+
+var
+Idade, Dosagem: Inteiro
+Peso: Real
+
+Dosagem = 500mg = 20gotas
+
+
+Escreva ("Digite a idade do paciente: ");
+Leia (Idade);
+
+Escreva ("Digite o peso do paciente: ");
+Leia (Peso);
+
+	Se (Idade > 12 E Peso >= 60) Então
+		Escreva ("O paciente deve tomar 40 gotas do medicamento por dose.");
+			Se (Idade > 12 E Peso < 60) Então
+				Escreva ("O paciente deve tomar 35 gotas do medicamento por dose.");
+					Se (Idade < 12 E Peso > 30) Então
+						Escreva ("O paciente deve tomar 30 gotas do medicamento por dose.");
+							Se (Idade < 12 E Peso >= 24.1 E Peso <= 30) Então
+								Escreva ("O paciente deve tomar 20 gotas do medicamento por dose.");
+									Se (Idade < 12 E Peso >= 16.1 E Peso <= 24) Então
+										Escreva ("O paciente deve tomar 15 gotas do medicamento por dose.");
+											Se (Idade < 12 E Peso >= 9.1 E Peso <= 16) Então
+												Escreva ("O paciente deve tomar 10 gotas do medicamento por dose.");
+													Se (Idade < 12 E Peso >= 5 E Peso <= 9) Então
+														Escreva ("O paciente deve tomar 5 gotas do medicamento por dose.");
+													FimSe
+											FimSe
+									FimSe
+							FimSe
+					FimSe
+			FimSe
+	FimSe
+	Fim													
+

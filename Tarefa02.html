@@ -1,0 +1,80 @@
+Estruturas condicionais e de repetição: Compra de produto (Switch Case)	
+"""
+Faça um programa que receba:
+
+O código do produto comprado; e
+A quantidade comprada do produto.
+Calcule e mostre:
+
+O preço unitário do produto comprado, seguindo a Tabela abaixo;
+O preço total da nota;
+O valor do desconto, seguindo a Tabela abaixo e aplicado sobre o preço total da nota; e
+O preço final da nota depois do desconto.
+
+"""
+
+
+Inicio
+
+var
+Código, Quantidade: Inteiro
+PrecoProduto, PrecoTotal, ValorDesconto, PrecoFinal: Real
+
+
+PrecoTotal = PrecoProduto * Quantidade
+PrecoFinal = PrecoTotal - ValorDesconto
+
+ValorDesconto1 = PrecoTotal * 0.05
+ValorDesconto2 = PrecoTotal * 0.10
+ValorDesconto3 = PrecoTotal * 0.15
+
+
+Laco = 1
+
+Enquanto (Laco <=40) Faça
+
+Excreva ("Digite o código do produto: ");
+Leia (Código);
+	Se (código >= 1 E <= 10) Então
+	PrecoProduto = 10
+		Escreva ("O preço do produto é R$ 10,00");
+			
+			Se (código >= 11 E <= 20) Então
+			PrecoProduto = 15
+				Escreva ("O preço do produto é R$ 15,00");
+				
+					Se (código >= 21 E <= 30) Então
+					PrecoProduto = 20
+						Escreva ("O preço do produto é R$ 20,00");
+					
+							Se (código >= 31 E <= 40) Então
+							PrecoProduto = 30
+								Escreva ("O preço do produto é R$ 30,00").
+							FimSe
+					FimSe
+			FimSe
+	FimSe
+FimEnquanto
+
+Excreva ("Digite a quantidade comprada do produto: ");
+Leia (Quantidade);
+
+Escreva ("O preço total da nota é: ", PrecoTotal);
+
+Se (PrecoTotal <= 250) Então
+ValorDesconto = ValorDesconto1
+	Escreva ("O valor do desconto é: ", ValorDesconto);
+	
+		Se (PrecoTotal > 250 E <= 500) Então
+		ValorDesconto = ValorDesconto2
+			Escreva ("O valor do desconto é: ", ValorDesconto);
+
+				Se (PrecoTotal > 500) Então
+				ValorDesconto = ValorDesconto3
+					Escreva ("O valor do desconto é: ", ValorDesconto);
+				FimSe
+		FimSe
+FimSe	
+
+Escreva ("O preço final da nota: ", PrecoFinal);
+Fim
